@@ -72,10 +72,10 @@
             // add event listener to the button
             document.querySelector(".moving-button").addEventListener('mouseenter', () => {
                 // change position
-                moveButtonNew.style.top = getRandomInt(1, 500) + "px";
-                moveButtonNew.style.bottom = getRandomInt(1, 500) + "px";
-                moveButtonNew.style.left = getRandomInt(1, 500) + "px";
-                moveButtonNew.style.right = getRandomInt(1, 500) + "px";
+                moveButtonNew.style.top = getRandomInt(1, screenHeight - 25) + "px";
+                moveButtonNew.style.bottom = getRandomInt(1, screenHeight - 25) + "px";
+                moveButtonNew.style.left = getRandomInt(1, screenWidth - 25) + "px";
+                moveButtonNew.style.right = getRandomInt(1, screenWidth - 25) + "px";
                 hoverCount++;
                 if (hoverCount == countTreshold) {
                     // alert("WHY DONT YOU LOVE ME????!?!?!?!?!")
