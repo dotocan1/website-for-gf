@@ -11,8 +11,6 @@
     width: fit-content;
 }
 
-
-
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -44,4 +42,14 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+}
+
+.image{
+    margin-left: 4rem;
 }
