@@ -12,7 +12,7 @@
 
 <body>
     <div class="main">
-        <div class = "heading">
+        <div class="heading">
             <img class="image" src="./images/girl-kissing-boy.gif" alt="" loop>
             <h1>Do you love me?</h1>
         </div>
@@ -20,6 +20,16 @@
             <button id="move-button">Yes</button>
             <button id="no-button">No</button>
         </div>
+    </div>
+
+    <!-- Popup container -->
+    <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <div class="heading">
+            <img class="image" src="./images/boy-mad.gif" alt="" loop>
+            <h1>WHY DONT YOU LOVE ME!!!????</h1>
+        </div>
+    </div>
     </div>
 
     <script>
@@ -69,9 +79,20 @@
         })
 
         // add event listener to no button
-        noButton.addEventListener("click", () =>{
-            alert("WHY DONT YOU LOVE ME????!?!?!?!?!");
+        noButton.addEventListener("click", () => {
+            // alert("WHY DONT YOU LOVE ME????!?!?!?!?!");
+            openPopup();
         })
+
+        // popup code
+
+        function openPopup () {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup () {
+            document.getElementById("popup").style.display = "none";
+        }
 
     </script>
 </body>
