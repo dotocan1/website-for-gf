@@ -14,10 +14,22 @@
         <div><h1>Do you love me?</h1></div>
         <div>
             <button>Yes</button>
-            <button>No</button>
+            <button id = "move-button">No</button>
         </div>
     </div>
 
+    <script>
+        const moveButton = document.getElementById("move-button");
+
+        moveButton.addEventListener('click',() =>{
+            console.log("CLICKED!");
+
+            // hide the button
+            moveButton.style.display = "none";
+
+            // create new button
+        })
+    </script>
 </body>
 
 </html>
