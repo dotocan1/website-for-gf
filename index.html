@@ -43,6 +43,11 @@
         const main = document.querySelector(".main");
         const noButton = document.getElementById("no-button");
         let hoverCount = 0;
+        let countTreshold = getRandomInt(3, 8)
+
+        // Get the current screen width and height
+        var screenWidth = window.screen.width;
+        var screenHeight = window.screen.height;
 
         moveButton.addEventListener('mouseenter', () => {
             console.log("CLICKED!");
@@ -56,10 +61,10 @@
             // add class to it and default styles
             moveButtonNew.classList.add("moving-button")
             moveButtonNew.textContent = "Yes";
-            moveButtonNew.style.top = getRandomInt(1, 500) + "px";
-            moveButtonNew.style.bottom = getRandomInt(1, 500) + "px";
-            moveButtonNew.style.left = getRandomInt(1, 500) + "px";
-            moveButtonNew.style.right = getRandomInt(1, 500) + "px";
+            moveButtonNew.style.top = getRandomInt(1, screenHeight - 25) + "px";
+            moveButtonNew.style.bottom = getRandomInt(1, screenHeight - 25) + "px";
+            moveButtonNew.style.left = getRandomInt(1, screenWidth - 25) + "px";
+            moveButtonNew.style.right = getRandomInt(1, screenWidth - 25) + "px";
 
             // append it
             main.appendChild(moveButtonNew);
@@ -72,7 +77,7 @@
                 moveButtonNew.style.left = getRandomInt(1, 500) + "px";
                 moveButtonNew.style.right = getRandomInt(1, 500) + "px";
                 hoverCount++;
-                if (hoverCount == 10) {
+                if (hoverCount == countTreshold) {
                     // alert("WHY DONT YOU LOVE ME????!?!?!?!?!")
                     moveButtonNew.style.display = "none";
                     openPopup();
